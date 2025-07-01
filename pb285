@@ -1,0 +1,25 @@
+import java.util.*;
+
+// Write  a java program that reads in a list of integers from the user and stores them in a HashSet. The program should then compute the sum of
+//all unique integers in the HashSet and output the result to the user. If the
+//user enters the same integer multiple times, it should only be counted once in the sum.
+class pb285 {
+    public static void main(String[] args) {
+        HashSet <Integer>h=new HashSet<>();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the no. of integer you want to add : ");
+        int n= sc.nextInt();
+        for (int i = 1; i <=n ; i++) {
+            System.out.println("Enter no. : ");
+            int s= sc.nextInt();
+            h.add(s);
+        }
+        int sum=0;
+        for (int num : h) {
+            sum += num;
+        }
+        System.out.println(h);
+        System.out.println("Sum of all unique integers: " + sum);
+
+    }
+}
